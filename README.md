@@ -1,11 +1,6 @@
 🚀 Magochi Web Admin
 <div align="center">
-https://img.shields.io/badge/version-10.0-blue.svg
-https://img.shields.io/badge/PHP-7.4+-777BB4.svg
-https://img.shields.io/badge/MySQL-5.7+-4479A1.svg
-https://img.shields.io/badge/license-MIT-green.svg
-https://img.shields.io/badge/platform-Linux%2520%257C%2520SBC%2520%257C%2520IoT-ready-lightgrey.svg
-https://img.shields.io/badge/Made%2520with-%E2%9D%A4%EF%B8%8F-red.svg
+
 
 Complete Web Hosting Control Panel for Headless Linux, SBCs, and DIY IoT Projects
 
