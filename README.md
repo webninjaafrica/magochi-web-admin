@@ -1,3 +1,12 @@
+🚀 Magochi Web Admin
+<div align="center">
+https://img.shields.io/badge/version-10.0-blue.svg
+https://img.shields.io/badge/PHP-7.4+-777BB4.svg
+https://img.shields.io/badge/MySQL-5.7+-4479A1.svg
+https://img.shields.io/badge/license-MIT-green.svg
+https://img.shields.io/badge/platform-Linux%2520%257C%2520SBC%2520%257C%2520IoT-ready-lightgrey.svg
+https://img.shields.io/badge/Made%2520with-%E2%9D%A4%EF%B8%8F-red.svg
+
 Complete Web Hosting Control Panel for Headless Linux, SBCs, and DIY IoT Projects
 
 Features • Installation • Documentation • Support
@@ -66,16 +75,16 @@ Web Server (Apache/Nginx)
 One-Click Install
 bash
 # Download the latest version
-wget https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi_host.php
+wget https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi-web-admin-v3.php
 
 # Or with curl
-curl -O https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi_host.php
+curl -O https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi-web-admin-v3.php
 
 # Make it executable
-chmod +x magochi_host.php
+chmod +x magochi-web-admin-v3.php
 
 # Run the installer
-php magochi_host.php --install
+php magochi-web-admin-v3.php --install
 Docker Installation
 bash
 # Pull and run the container
@@ -100,7 +109,7 @@ FLUSH PRIVILEGES;
 Update configuration
 
 php
-// Edit magochi_host.php
+// Edit magochi-web-admin-v3.php
 $db_host = 'localhost';
 $db_user = 'magochi_user';
 $db_pass = 'your_password';
@@ -114,7 +123,7 @@ chown -R www-data:www-data /var/www/html/
 Access the panel
 
 text
-http://your-server-ip/magochi_host.php
+http://your-server-ip/magochi-web-admin-v3.php
 Raspberry Pi Installation Script
 bash
 #!/bin/bash
@@ -129,7 +138,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y apache2 mysql-server php php-mysql php-curl php-zip php-mbstring
 
 # Download the panel
-sudo wget -O /var/www/html/index.php https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi_host.php
+sudo wget -O /var/www/html/index.php https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi-web-admin-v3.php
 
 # Set permissions
 sudo chown www-data:www-data /var/www/html/index.php
@@ -169,27 +178,27 @@ API Reference
 bash
 # List domains
 curl -H "X-API-Key: YOUR_API_KEY" \
-  "http://your-server/magochi_host.php?api=v1&endpoint=domains"
+  "http://your-server/magochi-web-admin-v3.php?api=v1&endpoint=domains"
 
 # Create domain
 curl -X POST \
   -H "X-API-Key: YOUR_API_KEY" \
   -d "domain=example.com" \
-  "http://your-server/magochi_host.php?api=v1&endpoint=domains"
+  "http://your-server/magochi-web-admin-v3.php?api=v1&endpoint=domains"
 
 # Get server info
 curl -H "X-API-Key: YOUR_API_KEY" \
-  "http://your-server/magochi_host.php?api=v1&endpoint=server"
+  "http://your-server/magochi-web-admin-v3.php?api=v1&endpoint=server"
 File Management
 bash
 # Upload files via command line
 curl -F "uploaded_file=@/path/to/file.zip" \
-  "http://your-server/magochi_host.php?action=files&path=/home/user"
+  "http://your-server/magochi-web-admin-v3.php?action=files&path=/home/user"
 
 # Create directory
 curl -X POST \
   -d "foldername=my_site" \
-  "http://your-server/magochi_host.php?action=files&path=/home/user"
+  "http://your-server/magochi-web-admin-v3.php?action=files&path=/home/user"
 Cron Job Format
 text
 ┌───────────── minute (0 - 59)
@@ -210,17 +219,17 @@ Monthly on 1st	0 0 1 * *
 Directory Structure
 text
 /var/www/html/
-├── magochi_host.php          # Main control panel
-├── admin_root/               # Admin root directory
-├── domains/                  # Domain folders
+├── magochi-web-admin-v3.php   # Main control panel
+├── admin_root/                # Admin root directory
+├── domains/                   # Domain folders
 │   └── example.com/
 │       ├── index.html
 │       └── .htaccess
-├── uploads/                  # User uploads
-├── backups/                  # Database backups
-├── temp/                     # Temporary files
+├── uploads/                   # User uploads
+├── backups/                   # Database backups
+├── temp/                      # Temporary files
 └── config/
-    └── db_config.php         # Auto-generated config
+    └── db_config.php          # Auto-generated config
 Environment Variables
 bash
 # Set these in your .env file or shell
@@ -238,8 +247,8 @@ Enable HTTPS (Let's Encrypt recommended)
 Restrict file permissions:
 
 bash
-chmod 640 /var/www/html/magochi_host.php
-chown www-data:www-data /var/www/html/magochi_host.php
+chmod 640 /var/www/html/magochi-web-admin-v3.php
+chown www-data:www-data /var/www/html/magochi-web-admin-v3.php
 Use environment variables instead of hardcoded credentials
 
 Enable firewall and restrict access:
@@ -390,7 +399,7 @@ If you find this project useful, consider supporting its development:
 
 💰 PayPal Donation
 
-🪙 Cryptocurrency: BTC address (contact for details)
+🪙 Cryptocurrency: Contact for details
 
 📢 Serious Projects & Collaborations
 I'm open to:
