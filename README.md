@@ -1,19 +1,10 @@
-🚀 Magochi Host Admin
-<div align="center">
-https://img.shields.io/badge/version-10.0-blue.svg
-https://img.shields.io/badge/PHP-7.4+-777BB4.svg
-https://img.shields.io/badge/MySQL-5.7+-4479A1.svg
-https://img.shields.io/badge/license-MIT-green.svg
-https://img.shields.io/badge/platform-Linux%2520%257C%2520SBC%2520%257C%2520IoT-ready-lightgrey.svg
-https://img.shields.io/badge/Made%2520with-%E2%9D%A4%EF%B8%8F-red.svg
-
 Complete Web Hosting Control Panel for Headless Linux, SBCs, and DIY IoT Projects
 
 Features • Installation • Documentation • Support
 
 </div>
 📋 Overview
-Magochi Host Admin is a lightweight, self-contained web hosting control panel designed specifically for headless Linux servers, single-board computers (Raspberry Pi, Orange Pi, etc.), and DIY IoT enthusiasts & software developers. It provides a complete web-based interface for managing web hosting services with minimal resource requirements.
+Magochi Web Admin is a lightweight, self-contained web hosting control panel designed specifically for headless Linux servers, single-board computers (Raspberry Pi, Orange Pi, etc.), and DIY IoT enthusiasts & software developers. It provides a complete web-based interface for managing web hosting services with minimal resource requirements.
 
 🎯 Target Audience
 DIY IoT Hobbyists: Manage your home server, IoT dashboard, or smart home control panels
@@ -40,7 +31,7 @@ Feature	Description
 🎨 Theme System	Customizable colors and dark mode support
 📝 Activity Logs	Track all system activities and user actions
 ⚙️ PHP Settings	Configure PHP.ini settings from web interface
-💡 Why Magochi Host Admin?
+💡 Why Magochi Web Admin?
 For DIY IoT & SBC Users
 bash
 # Run a complete web hosting solution on your Raspberry Pi
@@ -75,10 +66,10 @@ Web Server (Apache/Nginx)
 One-Click Install
 bash
 # Download the latest version
-wget https://github.com/magochihost/admin/raw/main/magochi_host.php
+wget https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi_host.php
 
 # Or with curl
-curl -O https://github.com/magochihost/admin/raw/main/magochi_host.php
+curl -O https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi_host.php
 
 # Make it executable
 chmod +x magochi_host.php
@@ -91,14 +82,14 @@ bash
 docker run -d \
   -p 8080:80 \
   -v $(pwd)/data:/var/www/html \
-  --name magochi-host \
-  magochi/admin:latest
+  --name magochi-web-admin \
+  webninjaafrica/magochi-web-admin:latest
 Manual Installation
 Clone the repository
 
 bash
-git clone https://github.com/magochihost/admin.git
-cd admin
+git clone https://github.com/webninjaafrica/magochi-web-admin.git
+cd magochi-web-admin
 Configure database
 
 sql
@@ -127,9 +118,9 @@ http://your-server-ip/magochi_host.php
 Raspberry Pi Installation Script
 bash
 #!/bin/bash
-# Magochi Host Installer for Raspberry Pi
+# Magochi Web Admin Installer for Raspberry Pi
 
-echo "🚀 Installing Magochi Host Admin on Raspberry Pi"
+echo "🚀 Installing Magochi Web Admin on Raspberry Pi"
 
 # Update system
 sudo apt update && sudo apt upgrade -y
@@ -138,7 +129,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y apache2 mysql-server php php-mysql php-curl php-zip php-mbstring
 
 # Download the panel
-sudo wget -O /var/www/html/index.php https://raw.githubusercontent.com/magochihost/admin/main/magochi_host.php
+sudo wget -O /var/www/html/index.php https://raw.githubusercontent.com/webninjaafrica/magochi-web-admin/main/magochi_host.php
 
 # Set permissions
 sudo chown www-data:www-data /var/www/html/index.php
@@ -328,8 +319,8 @@ We welcome contributions! Here's how you can help:
 Development Setup
 bash
 # Clone the repository
-git clone https://github.com/magochihost/admin.git
-cd admin
+git clone https://github.com/webninjaafrica/magochi-web-admin.git
+cd magochi-web-admin
 
 # Install development dependencies
 composer install
@@ -426,6 +417,15 @@ Roadmap
 □ v12.0 - Advanced monitoring and analytics
 □ v12.5 - AI-powered security features
 □ v13.0 - Cluster management
+📌 Quick Links
+GitHub Repository
+
+Issue Tracker
+
+Wiki Documentation
+
+Website
+
 <div align="center">
 Made with ❤️ by Kelvin Magochi for the DIY, IoT, and open-source community
 
